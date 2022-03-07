@@ -38,13 +38,15 @@ class LinearAlgebra:
     Matriz(a.linhas,a.colunas, res)
 
   //Multiplicação Matricial
-  /*def dot(a: Matriz, b: Matriz) =
+  def dot(a: Matriz, b: Matriz) =
     val res = Array.fill(a.linhas)(Array.fill(b.colunas)(0))
-    var acumulador = 0
-    if a.colunas == b.linhas then
-        b.elementos.indices foreach(i =>
-          a.elementos(i).indices foreach(j =>
-            acumulador += a.elementos(i)(j) * b.elementos(j)(i) ))
+    /*if a.colunas == b.linhas then
+      res.indices foreach(i =>
+        res(i).indices foreach(j =>
+          b.elementos.indices foreach(m =>
+            a.elementos(m).indices foreach(n =>
+              res(i)(j) += a.elementos(m)(n) * b.elementos(n)(m) ))
+          ))
     else throw new Error("O numero de colunas da primeira matriz precisa ser igual ao numero de linhas da segunda matriz")
     Matriz(a.linhas, b.colunas, res)
-*/
+    */
