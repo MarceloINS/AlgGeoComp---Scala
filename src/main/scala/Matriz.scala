@@ -1,4 +1,4 @@
-class Matriz(numLinhas: Int, numColunas: Int, entrada: Array[Array[Int]]):
+class Matriz(numLinhas: Int, numColunas: Int, entrada: Array[Array[Double]]):
 
   val _linhas = numLinhas
   val _colunas = numColunas
