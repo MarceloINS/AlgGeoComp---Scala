@@ -18,3 +18,9 @@ class Auxiliar:
         if j == (a.colunas-1) then
           println(a.elementos(i)(j))
         else print(s"${a.elementos(i)(j)} ")))
+    
+  def isVector(vector: Matriz) =
+    if(vector.colunas != 1) then
+      false
+    else
+      true
