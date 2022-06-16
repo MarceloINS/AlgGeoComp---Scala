@@ -66,7 +66,7 @@ class Auxiliar:
   def mod(a: Matriz) =
     var acumulate = 0.0
     for(i <- 0 until a.linhas)
-        acumulate = acumulate + a.elementos(i)(0) * a.elementos(i)(0) //caguei pro ^
+        acumulate = acumulate + a.elementos(i)(0) * a.elementos(i)(0)
     acumulate
 
   def div(a: Matriz, b: Double) =
