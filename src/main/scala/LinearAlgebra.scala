@@ -47,11 +47,11 @@ class LinearAlgebra:
     else throw Exception("O numero de colunas da primeira matriz precisam ser igual ao numero de linhas da segunda matriz")
     new Matriz(a.linhas, b.colunas, res)
 
-  def tortura(a: Matriz, cntrl: Int) : Matriz =
+  def rankMatriz(a: Matriz, cntrl: Int) : Matriz =
     if cntrl == 0 then
       a
     else
-      val c = aux.div(dot(aux.getMatrizAdjacencia, a), aux.mod(a))
+      val c = aux.div(dot(aux.getMatrizAdjacencia, a), aux.mod(dot(aux.getMatrizAdjacencia, a)))
       val d = aux.div(dot(transpose(aux.getMatrizAdjacencia), c), aux.mod(dot(transpose(aux.getMatrizAdjacencia), c)))
-      tortura(d, cntrl-1)
+      rankMatriz(d, cntrl-1)
 
